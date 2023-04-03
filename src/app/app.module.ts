@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ApplyForLoanComponent } from './Loans/apply-for-loan/apply-for-loan/apply-for-loan.component';
 import { LoansModuleComponent } from './Loans/loansModule/loans-module/loans-module.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
