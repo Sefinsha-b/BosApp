@@ -8,7 +8,7 @@ import { ApplyForLoanService } from '../../Services/apply-for-loan.service';
   styleUrls: ['./apply-for-loan.component.css']
 })
 export class ApplyForLoanComponent implements OnInit {
-  
+
 
   //to create object
   addForm = new FormGroup({
@@ -42,11 +42,15 @@ export class ApplyForLoanComponent implements OnInit {
 
   })
   LoanAppointments: any;
+  Loans: any;
+
+
   constructor(private loan: ApplyForLoanService) { }
   ngOnInit(): void {
     // this.submit();
     this.inputfields();
-    
+    this.GetLoanData();
+
   }
   get add() {
     return this.addForm.controls;
@@ -70,14 +74,24 @@ export class ApplyForLoanComponent implements OnInit {
     }
 
   }
-
+  //Post method
   submit() {
     return this.loan.PostLoanData(this.addForm.value).subscribe((resp: any) => {
-      // this.LoanAppointments = resp;
+      this.LoanAppointments = resp;
       console.log(resp);
       alert('SUCCESS POST')
     })
   }
+  //Get ,ethod
+  GetLoanData() {
+    return this.loan.GetLoan().subscribe((resp: any) => {
+      this.Loans = resp;
+
+
+    })
+  }
+
+
 
 
 }

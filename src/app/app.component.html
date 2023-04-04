@@ -1,3 +1,9 @@
-<app-apply-for-loan></app-apply-for-loan>
-<router-outlet></router-outlet>
+<nav>
+    <ul>
+        <button class="btn btn-secondary" routerLink="['/home']">Home</button>
+        <button class="btn btn-secondary" [routerLink]="['/addapplication']">Add Application</button>
+        <button class="btn btn-secondary" [routerLink]="['/viewapplication']">View Application</button>
 
+    </ul>
+</nav>
+<router-outlet></router-outlet>

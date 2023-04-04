@@ -1,0 +1,86 @@
+<div class="main-wrapper">
+    <!-- <app-menu></app-menu> -->
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4 col-3">
+                    <h4 class="page-title">View Loans</h4>
+                </div>
+                <!-- <div class="col-sm-8 col-9 text-right m-b-20">
+                  <a href="Add Appointment" [routerLink]="['/add-appointments']" class="btn btn btn-primary btn-rounded float-right"><i class="fa fa-plus" id="add-button"></i> Add Appointment</a>
+              </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-border table-striped custom-table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NAME</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>Nationality</th>
+                                    <th>DOB</th>
+                                    <th>Age</th> <br>
+                                    <div>
+                                        <th>Type OF lOAN</th>
+                                    </div>
+
+
+                                </tr>
+                            </thead>
+
+
+                            <tr *ngFor="let LoanAmount of Loan">
+
+                                <td>{{LoanAmount.id}}</td>
+                                <td>{{LoanAmount.name}}</td>
+                                <td>{{LoanAmount.number}}</td>
+                                <td>{{LoanAmount.email}}</td>
+                                <td>{{LoanAmount.gender}}</td>
+                                <td>{{LoanAmount.nationality}}</td>
+                                <td>{{LoanAmount.dob}}</td>
+                                <td>{{LoanAmount.age}}</td> <br>
+                                <div>
+
+                                    <td>{{LoanAmount.loan}}</td>
+                                    <td>{{LoanAmount.aadhar}}</td>
+                                    <td>{{LoanAmount.address}}</td>
+                                    <td>{{LoanAmount.propertySqft}}</td>
+                                    <td>{{LoanAmount.builderName}}</td>
+                                    <td>{{LoanAmount.propertyValue}}</td>
+                                    <td>{{LoanAmount.annualSalary1}}</td>
+                                    <td>{{LoanAmount.loanAmount1}}</td>
+                                    <td>{{LoanAmount.loanDuration1}}</td>
+                                    <td>{{LoanAmount.companyname}}</td>
+                                    <td>{{LoanAmount.experience}}</td>
+                                    <td>{{LoanAmount.annualSalary2}}</td>
+                                    <td>{{LoanAmount.emiamount}}</td>
+                                    <td>{{LoanAmount.loanAmount2}}</td>
+                                    <td>{{LoanAmount.annualSalary1}}</td>
+                                    <td>{{LoanAmount.loanDuration2}}</td>
+                                </div>
+
+
+                                <td class="text-right">
+                                    <div class="flex-container">
+                                        <!-- <button type="submit" class="btn btn-danger" (click)="deleteAppointment(appointment)">Delete</button> -->
+                                        <button type="submit" class="btn btn-secondary"
+                                            routerLink="/edit/{{LoanAmount.id}}">Edits</button>
+                                    </div>
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
